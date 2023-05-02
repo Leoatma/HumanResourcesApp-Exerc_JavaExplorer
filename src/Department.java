@@ -38,11 +38,11 @@ public class Department {
             }
         }
         Employee[] actualEmployees = new Employee[employeeCount];
-        for (int idx = 0; idx < depEmployees.length; idx++) {
-            if (depEmployees[idx] != null) {
-                actualEmployees[idx] = depEmployees[idx];
-            }
+
+        for (int idx2 = 0; idx2 < employeeCount; idx2++) {
+                actualEmployees[idx2] = depEmployees[idx2];
         }
+
         System.out.printf("There are %d employees in this Department:\n", actualEmployees.length);
         return actualEmployees;
     }
