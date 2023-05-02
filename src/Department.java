@@ -1,15 +1,17 @@
 import java.util.Arrays;
 
 public class Department {
+
     private String depName;
 
-    private Employee[] depEmployees = new Employee[10];
+    private Employee[] depEmployees = new Employee[10]; // Array with 10 employees max for each department
 
+    // Constructors
     public Department(String depName) {
         this.depName = depName;
     }
 
-   public Department(String departName, Employee[] depEmployees) {
+    public Department(String departName, Employee[] depEmployees) {
         this.depName = departName;
         this.depEmployees = depEmployees;
     }
@@ -27,6 +29,7 @@ public class Department {
         this.depName = departName;
     }
 
+    // Get the Employees in the dep without null values
     public Employee[] getDepEmployees() {
         int employeeCount = 0;
         for (int i = 9; i >= 0; i--) {
@@ -45,9 +48,6 @@ public class Department {
     }
 
 
-
-
-
     public void setDepEmployees(Employee[] depEmployees) {
         this.depEmployees = depEmployees;
     }
@@ -60,6 +60,7 @@ public class Department {
             }
         }
     }
+
     public Employee getEmployeeById(int id) {
         Employee employeeById = null;
         try {
@@ -73,7 +74,7 @@ public class Department {
                 System.out.print("Id não encontrado: ");
             }
         }
-            return employeeById;
+        return employeeById;
     }
 
     public double getTotalSalary() {
@@ -83,7 +84,7 @@ public class Department {
                 totalSalary += employee.getSalary();
             }
         }
-            return totalSalary;
+        return totalSalary;
     }
 
     public double getAverageSalary() {
@@ -95,6 +96,4 @@ public class Department {
         }
         return getTotalSalary() / employeesCount;
     }
-
-
 }

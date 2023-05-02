@@ -3,6 +3,7 @@ public class Employee {
     private String name;
     private double salary;
 
+    //Construtors
     public Employee() {
     }
 
@@ -17,6 +18,7 @@ public class Employee {
         return "\nName: " + getName() + "\nID: " + getID() + "\nSalary: " + getSalary() + "\n";
     }
 
+    // Getters and Setters
     public int getID() {
         return ID;
     }
